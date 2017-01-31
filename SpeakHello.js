@@ -14,10 +14,10 @@ var speakWord = "Hello";
 // helloSpeaker object instead of being a standalone function.
 // See Lecture 52, part 2
 
-var names = ["Yaakov", "Paul", "Frank", "Larry", "Paula", "Laura"];
-for (var i = 0; i < names.length; i++) {
-  console.log("Hello " + names[i]);
-}
+// var names = ["Yaakov", "Paul", "Frank", "Larry", "Paula", "Laura"];
+// for (var i = 0; i < names.length; i++) {
+//   console.log("Hello " + names[i]);
+// }
 
 
 
@@ -30,3 +30,18 @@ for (var i = 0; i < names.length; i++) {
 // See Lecture 52, part 2
 // (Note, Step 6 will be done in the SpeakGoodBye.js file.)
 // xxxx.xxxx = helloSpeaker;
+
+
+
+(function(window){
+	var speakWord = "Hello";
+	
+	var helloSpeaker = {};
+
+	helloSpeaker.speak = function (name){
+		 console.log(speakWord + " " + name); 
+		} 
+
+	window.helloSpeaker = helloSpeaker;
+	
+ })(window);
